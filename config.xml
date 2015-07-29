@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.phonegap.trailmakingtest"
+        versionCode="10" 
+        version   = "1.0.0">
+    <name>TrailMakingTest</name>    
+    <preference name="orientation" value="landscape" /> 
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="fullscreen" value="true" />
+    <preference name="loglevel" value="DEBUG" />     
+    <description>
+       This is the Trailmakingtest task of the NeuroCare Screening 
+    </description>
+    
+    <author href="http://www.ascora.de" email="aem@ascora.de">
+        Abdelkarim El Moussaoui 
+    </author>
+<icon src="icon.png" />
+<gap:splash src="splash.png" gap:platform="ios" width="320" height="200"/>
+<gap:splash src="splash.png" gap:platform="android" width="320" height="200"/>
+
+  
+</widget>

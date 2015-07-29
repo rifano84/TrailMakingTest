@@ -1,0 +1,126 @@
+<!--
+This is the start html page which will be presented when the app is started. 
+This page should contain: 
+* Authentification (login)
+* Instructions
+* Informations
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>NeuroCare Screening</title>
+
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.0b1.min.css"/>       
+        <link rel="stylesheet" href="css/style.css" media="screen and (orientation: landscape)" type="text/css">  
+
+        <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.0rc2.min.js"></script>
+        <script type="text/javascript" src="js/jstorage.js"></script>
+        <script type="text/javascript" src="js/jsfunctions.js"></script>
+        
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        
+        
+        <!--flush the local storage-->
+        <script>
+            jQuery.jStorage.flush();
+
+        </script>
+        
+         <!--scrip für passwortschutz-->
+        <script>
+
+
+
+            function pwschutz()
+            {
+                var username = prompt("Bitte geben Sie Ihre Testperson-ID ein", "");
+                var password = prompt("Bitte geben Sie das Passwort ein:", "");
+
+                login(username, password);
+//                if (password !== "Screening" || username === null || username === "") {
+//                    $.mobile.changePage('#forbiddenHint', {transition: "flip"});
+//
+//                }
+//                else if (password === "Screening" && username !== null && username !== "") {
+//                    jQuery.jStorage.set("UserName", username);
+//                    $.mobile.changePage('#startpage', {transition: "flip"});
+//
+//
+//                }
+//                return;
+            }
+
+
+        </script>
+        
+        
+        
+        
+    </head>
+    
+    
+    
+    <body onload="pwschutz();">
+        
+        <!--startpage for neurocare Trail making test-->
+        <div data-role="page" id="start" data-dom-cache=true class="startPage" >
+
+
+            <div data-role="content">
+
+                
+
+
+
+            </div>
+
+            <!--script used to show start page for few seconds and the to switch to intro page-->
+<!--            <script type="text/javascript">
+
+                $(document).delegate('#start', 'pageshow', function() {
+
+                    function showJustForWhile() {
+                        setTimeout(function() {
+                            window.location = "Trailmakingtest.html";
+                        }, 2000);
+
+                    }
+
+                    showJustForWhile();
+
+                });
+            </script>-->
+
+
+        </div>
+        
+        
+        
+        
+        
+        <!--forbidden page-->
+        <div data-role="page" id="forbiddenHint" data-dom-cache=true class="introPage">
+
+            <div data-role="content">
+                <h1>Unberechtigter Zugang!</h1> 
+                <br><br>
+                <br><br>
+
+
+                <p class="instructionText">Sie haben entweder das falsche Passwort oder eine bereits existierende ID eingegeben.<br> Bitte versuchen Sie es erneut.</p>
+                <br>
+
+                <br><br>
+                <center> <a href="javascript:pwschutz()" data-role="button" data-inline="true" class="defaultButton" >Nochmal</a> </center>
+            </div>
+        </div> 
+        
+        
+    </body>
+</html>

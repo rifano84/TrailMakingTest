@@ -1,0 +1,526 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NeuroCare Screening</title>
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.0b1.min.css"/>
+        <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.0rc2.min.js"></script>
+        <link rel="stylesheet" href="css/style.css" media="screen and (orientation: landscape)" type="text/css">  
+        <link rel="stylesheet" href="css/style_none.css" media="screen and (orientation: portrait)" type="text/css">     
+
+        <script type="text/javascript" src="js/jsfunctions.js"></script>
+        <script type="text/javascript" src="js/jstorage.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+
+
+    </head>
+
+
+
+    <body>
+
+
+
+
+
+        <div data-role="page" id="test2Start" data-dom-cache=true class="introPage">
+
+            <div data-role="content">
+
+                <div class="testname">Aufgabe<br>Pfadfindertest<br>
+                    <!--<a href="#intro2v1a" data-role="button" data-inline="true" class="defaultButton" >Zur Aufgabe</a>-->
+                </div>
+
+                <div class="kreis"   style="top: 5%;left: 5%" >
+                    <p>35</p> 
+                </div>
+                <div class="kreis"   style="top: 15%;left: 20%" >
+                    <p>14</p> 
+                </div>
+                <div class="kreis"   style="top: 10%;left: 50%" >
+                    <p>B</p> 
+                </div>          
+                <div class="kreis"  style="top: 5%;left: 70%" >
+                    <p>K</p> 
+                </div>
+                <div class="kreis"   style="top: 8%;left: 90%" >
+                    <p>S</p> 
+                </div>
+                <div class="kreis"   style="top: 25%;left: 80%" >
+                    <p>87</p> 
+                </div>
+                <div class="kreis"   style="top: 60%;left: 80%" >
+                    <p>6</p> 
+                </div>
+                <div class="kreis"   style="top: 80%;left: 70%" >
+                    <p>E</p> 
+                </div>
+                <div class="kreis"   style="top: 80%;left: 50%" >
+                    <p>20</p> 
+                </div>                
+                <div class="kreis"   style="top: 70%;left: 35%" >
+                    <p>1</p> 
+                </div>
+                <div class="kreis"   style="top: 80%;left: 20%" >
+                    <p>W</p> 
+                </div>
+                <div class="kreis"   style="top: 60%;left: 5%" >
+                    <p>2</p> 
+                </div>
+
+                <script type="text/javascript">
+                    $(document).delegate('#test2Start', 'pageshow', function () {
+
+                        function showJustForWhile() {
+                            setTimeout(function () {
+                                $.mobile.changePage('#intro2v1a', {transition: "flip"});
+                            }, 3000);
+
+                        }
+
+                        // assign tap events instead of onclick in order to reduce interaction delay
+//                $links = $("div[data-group*='tmt4']");  use .one() instead of .bind() to avoid double click
+//                alert($links.length);
+                        // first tmt
+                        $("div[data-group*='tmt1']").bind("tap", function () {
+                            selectNumber(this);
+                        });
+                        // second tmt
+                        $("div[data-group*='tmt2']").bind("tap", function () {
+                            selectNumberOrLetter(this);
+                        });
+                        // third tmt
+                        $("div[data-group*='tmt3']").bind("tap", function () {
+                            selectOnlyNumber(this);
+                        });
+                        // fourth tmt
+                        $("div[data-group*='tmt4']").bind("tap", function () {
+                            selectNumberOrLetterV4(this);
+                        });
+
+                        //test
+
+                        //
+
+
+                        showJustForWhile();
+
+                    });
+
+                </script>
+
+            </div>
+
+        </div>
+
+
+
+        <div data-role="page" id="intro2v1a" data-dom-cache=true class="introPage" allowFullScreen>
+
+            <div data-role="content">
+                <h1 class="instructionText1" >Was ist Ihre Aufgabe?</h1> 
+
+                <p class="instructionTextDescription">Gleich sehen Sie Ziffern von 1 bis 20 auf dem Bildschirm verteilt. 
+                    Diese sollen Sie in aufsteigender Reihenfolge nacheinander antippen. Von der Zahl 1, zur 2, zur 3 usw. bis Sie das Ziel, die Zahl 20, erreichen. </br>
+
+                </p>
+
+                <center><div>
+                        <image src="img/tmtDemo1.png"/>
+                    </div>
+                </center>
+                <br>
+
+                <p class="instructionTextDescription">Arbeiten Sie dabei <b>so schnell und</b> gleichzeitig <b>so fehlerfrei wie möglich!</b>
+                    Zu Ihrer Orientierung: Das Feld, das sie zuletzt richtig angetippt haben, färbt sich grün, ein falsch getipptes rot – dann korrigieren Sie sich bitte. 
+
+                </p>
+                <br>
+
+                <a href="#version1a" data-role="button" data-inline="true" class="defaultButton" onclick="switchToFullscreen();"
+                   style="float: right;">Aufgabe starten</a> 
+            </div>
+
+        </div>
+
+        <div data-role="page" id="version1a" data-dom-cache=true class="testPage">
+
+            <div data-role="content">
+                <!--<div id="timestamp" >.-.</div>-->
+                <div class="starthint" >
+                    <center> <p>Start</p> </center>
+                </div>
+
+                <div class="kreis" id="v11"  style="top: 8%;left: 82%" data-group="tmt1" >
+                    <p>1</p> 
+                </div>
+                <div class="kreis" id="v12"  style="top: 55%;left: 75%" data-group="tmt1">
+                    <p>2</p> 
+                </div>
+                <div class="kreis" id="v13" style="top: 80%;left: 42%" data-group="tmt1">
+                    <p>3</p>
+                </div>
+                <div class="kreis" id="v14"  style="top: 50%;left: 10%" data-group="tmt1">
+                    <p>4</p> 
+                </div>
+                <div class="kreis" id="v15"  style="top: 25%;left: 8%" data-group="tmt1">
+                    <p>5</p> 
+                </div>
+                <div class="kreis" id="v16" style="top: 50%;left: 55%" data-group="tmt1">
+                    <p>6</p> 
+                </div>
+                <div class="kreis" id="v17"  style="top: 73%;left: 85%" data-group="tmt1">
+                    <p>7</p> 
+                </div>
+                <div class="kreis" id="v18"  style="top: 40%;left: 90%" data-group="tmt1">
+                    <p>8</p> 
+                </div>
+                <div class="kreis" id="v19"  style="top: 3%;left: 70%" data-group="tmt1">
+                    <p>9</p> 
+                </div>
+                <div class="kreis" id="v110"  style="top: 3%;left: 10%" data-group="tmt1">
+                    <p>10</p> 
+                </div>
+                <div class="kreis" id="v111"  style="top: 20%;left: 25%" data-group="tmt1">
+                    <p>11</p>
+                </div>
+                <div class="kreis" id="v112"  style="top: 80%;left: 20%" data-group="tmt1">
+                    <p>12</p> 
+                </div>
+                <div class="kreis" id="v113"  style="top: 57%;left: 40%" data-group="tmt1">
+                    <p>13</p> 
+                </div>
+                <div class="kreis" id="v114"  style="top: 18%;left: 55%" data-group="tmt1">
+                    <p>14</p> 
+                </div>
+                <div class="kreis" id="v115"  style="top: 35%;left: 66%" data-group="tmt1">
+                    <p>15</p> 
+                </div>
+                <div class="kreis" id="v116"  style="top: 82%;left: 75%" data-group="tmt1">
+                    <p>16</p>
+                </div>
+                <div class="kreis" id="v117"  style="top: 60%;left: 27%" data-group="tmt1">
+                    <p>17</p> 
+                </div>
+                <div class="kreis" id="v118"  style="top: 11%;left: 40%" data-group="tmt1">
+                    <p>18</p> 
+                </div>
+                <div class="kreis" id="v119"  style="top: 30%;left: 45%" data-group="tmt1">
+                    <p>19</p> 
+                </div>               
+                <div class="kreis" id="v120"  style="top: 67%;left: 1%" data-group="tmt1">
+                    <p>20</p> 
+                </div>
+                <div id="endhint" >
+                    <center> <p>Ziel</p> </center>
+                </div>
+            </div>
+
+        </div>
+
+        <!--test version 2 a-->
+        <div data-role="page" id="intro2v2a" data-dom-cache=true class="introPage">
+
+            <div data-role="content">
+                <h1 class="instructionText1" >Ihre nächste Aufgabe...</h1> 
+
+                <p class="instructionTextDescription">Gleich sehen Sie auf dem Bildschirm wieder Ziffern, aber diesmal auch Buchstaben. 
+                    Tippen Sie die Zahlen und Buchstaben abwechselnd und in aufsteigender Reihenfolge bzw. entsprechend des Alphabets an. 
+                    Von der Zahl 1, zum Buchstaben A, zur Zahl 2, zum Buchstaben B usw. bis Sie das Ziel erreichen.</p>
+
+                <center> <div>
+                        <image src="img/tmtDemo2.png"/>
+                    </div>
+                </center>
+
+
+                <br>
+
+                <p class="instructionTextDescription">Arbeiten Sie dabei <b>so schnell und</b> gleichzeitig <b>so fehlerfrei wie möglich!</b>
+                    Zu Ihrer Orientierung: Das Feld, das sie zuletzt richtig angetippt haben, färbt sich grün, das vorletzte Feld wird blasser.
+                    Ein falsch getipptes Feld färbt sich rot – dann korrigieren Sie sich bitte.</p>
+                <br>
+
+                <a href="#version2a" data-role="button" data-inline="true" class="defaultButton" style="float: right;">Aufgabe starten</a> 
+
+            </div>
+
+        </div>
+
+        <div data-role="page" id="version2a" data-dom-cache=true class="testPage">
+
+
+            <div data-role="content">
+                <!--<div id="timestampV2" >.-.</div>-->
+                <div class="starthintleft" >
+                    <center><p> Start </p></center>
+                </div>
+                <!--buchstaben-->
+                <div class="kreis" id="a" style="top: 27%;left: 40%"  data-group="tmt2">
+                    <p>A</p> 
+                </div>
+                <div class="kreis" id="b" style="top: 45%;left: 85%"  data-group="tmt2">
+                    <p>B</p> 
+                </div>
+                <div class="kreis" id="c" style="top: 18%;left: 60%"  data-group="tmt2">
+                    <p>C</p>
+                </div>
+                <div class="kreis" id="d" style="top: 50%;left: 15%"  data-group="tmt2">
+                    <p>D</p> 
+                </div>
+                <div class="kreis" id="e" style="top: 65%;left: 40%"  data-group="tmt2">
+                    <p>E</p> 
+                </div>
+                <div class="kreis" id="f" style="top: 55%;left: 50%"  data-group="tmt2">
+                    <p>F</p> 
+                </div>
+                <div class="kreis" id="g" style="top: 80%;left: 25%"  data-group="tmt2">
+                    <p>G</p> 
+                </div>
+                <div class="kreis" id="h" style="top: 8%;left: 27%"  data-group="tmt2">
+                    <p>H</p> 
+                </div>
+                <div class="kreis" id="i" style="top: 50%;left: 75%"  data-group="tmt2">
+                    <p>I</p> 
+                </div>
+                <div class="kreis" id="j" style="top: 65%;left: 90%"  data-group="tmt2">
+                    <p>J</p> 
+                </div> 
+                <!--zahlen-->
+                <div class="kreis" id="v21" style="top: 12%;left: 14%"  data-group="tmt2">
+                    <p>1</p> 
+                </div>
+                <div class="kreis" id="v22" style="top: 1%;left: 65%"  data-group="tmt2">
+                    <p>2</p> 
+                </div>
+                <div class="kreis" id="v23" style="top: 12%;left: 80%" data-group="tmt2">
+                    <p>3</p>
+                </div>
+                <div class="kreis" id="v24" style="top: 80%;left: 45%"  data-group="tmt2">
+                    <p>4</p> 
+                </div>
+                <div class="kreis" id="v25" style="top: 70%;left: 5%"  data-group="tmt2">
+                    <p>5</p> 
+                </div>
+                <div class="kreis" id="v26" style="top: 75%;left: 70%"  data-group="tmt2">
+                    <p>6</p> 
+                </div>
+                <div class="kreis" id="v27" style="top: 30%;left: 20%"  data-group="tmt2">
+                    <p>7</p> 
+                </div>
+                <div class="kreis" id="v28" style="top: 40%;left: 2%"  data-group="tmt2">
+                    <p>8</p> 
+                </div>
+                <div class="kreis" id="v29" style="top: 42%;left: 63%"  data-group="tmt2">
+                    <p>9</p> 
+                </div>
+                <div class="kreis" id="v210" style="top: 8%;left: 90%"  data-group="tmt2">
+                    <p>10</p> 
+                </div> 
+
+                <div class="endhintright" >
+                    <center> <p>Ziel</p> </center>
+                </div>
+
+
+            </div>
+
+        </div> 
+
+        <!--test version 3 a-->
+        <div data-role="page" id="intro2v3a" data-dom-cache=true class="introPage">
+
+            <div data-role="content">
+                <h1 class="instructionText1" >Ihre nächste Aufgabe...</h1> 
+
+                <p class="instructionTextDescription">Gleich sehen Sie Ziffern auf dem Bildschirm verteilt. 
+                    Diese sollen Sie wieder in aufsteigender Reihenfolge nacheinander antippen.
+                    Das Schwierige dabei: Es fehlen Zahlen dazwischen. Wählen Sie daher immer die nächst höhere Zahl aus.</p>
+
+                <center><div>
+                        <image src="img/tmtDemo3.png"/>
+                    </div>
+                </center>
+
+                <br>
+
+                <p class="instructionTextDescription">Arbeiten Sie dabei <b>so schnell und</b> gleichzeitig <b>so fehlerfrei wie möglich!</b>
+                    Zu Ihrer Orientierung: Das Feld, das sie zuletzt richtig angetippt haben, färbt sich grün, ein falsch getipptes rot – dann korrigieren Sie sich bitte. 
+                </p>
+                <br>
+
+                <a href="#version3a" data-role="button" data-inline="true" class="defaultButton" style="float: right;">Aufgabe starten</a> 
+
+
+            </div>
+
+        </div>
+
+        <div data-role="page" id="version3a" data-dom-cache=true class="testPage">
+
+            <div data-role="content">
+                <!--<div id="timestampV3" >.-.</div>-->
+                <div class="starthintleft" >
+                    <center> <p>Start</p> </center>
+                </div>
+
+                <!--zahlen-->
+                <div class="kreis" id="v36" style="top: 12%;left: 14%" data-group="tmt3">
+                    <p>6</p> 
+                </div>
+                <div class="kreis" id="v315" style="top: 50%;left: 25%" data-group="tmt3">
+                    <p>15</p> 
+                </div>
+                <div class="kreis" id="v318" style="top: 40%;left: 90%" data-group="tmt3">
+                    <p>18</p>
+                </div>
+                <div class="kreis" id="v324" style="top: 15%;left: 45%" data-group="tmt3">
+                    <p>24</p> 
+                </div>
+                <div class="kreis" id="v333" style="top: 80%;left: 20%" data-group="tmt3">
+                    <p>33</p> 
+                </div>
+                <div class="kreis" id="v338" style="top: 45%;left: 4%" data-group="tmt3">
+                    <p>38</p> 
+                </div>
+                <div class="kreis" id="v342" style="top: 13%;left: 82%" data-group="tmt3">
+                    <p>42</p> 
+                </div>
+                <div class="kreis" id="v356" style="top: 65%;left: 70%" data-group="tmt3">
+                    <p>56</p> 
+                </div>
+                <div class="kreis" id="v361" style="top: 60%;left: 58%" data-group="tmt3">
+                    <p>61</p> 
+                </div>
+                <div class="kreis" id="v379" style="top: 8%;left: 65%" data-group="tmt3">
+                    <p>79</p> 
+                </div> 
+                <div class="kreis" id="v387" style="top: 80%;left: 40%" data-group="tmt3">
+                    <p>87</p> 
+                </div>
+                <div class="kreis" id="v395" style="top: 80%;left: 81%" data-group="tmt3">
+                    <p>95</p> 
+                </div>
+
+                <div class="endhintright" >
+                    <center> <p>Ziel</p> </center>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- test version 4a-->
+        <div data-role="page" id="intro2v4a" data-dom-cache=true class="introPage">
+
+            <div data-role="content">
+                <h1 class="instructionText1" >Ihre nächste Aufgabe...</h1> 
+
+                <p class="instructionTextDescription">Gleich sehen Sie auf dem Bildschirm wieder Ziffern aber auch Buchstaben. 
+                    Tippen Sie die Zahlen und Buchstaben abwechselnd und in aufsteigender Reihenfolge bzw. entsprechend des Alphabets an. 
+                    Das Schwierige dabei: es fehlen Zahlen und Buchstaben dazwischen. 
+                    Starten Sie mit der kleinsten Zahl, dann den vordersten Buchstaben im Alphabet,
+                    dann die nächst höhere Zahl, dann den nächst höheren Buchstaben im Alphabet usw. bis Sie das Ziel erreichen.</p>
+
+                <center>
+                    <div>
+                        <image src="img/tmtDemo4.png"/>
+                    </div>
+                </center>
+
+                <br>
+
+                <p class="instructionTextDescription">Arbeiten Sie dabei <b>so schnell und</b> gleichzeitig <b>so fehlerfrei wie möglich!</b>
+                    Zu Ihrer Orientierung: Das Feld, das sie zuletzt richtig angetippt haben, färbt sich grün, das vorletzte Feld wird blasser.
+                    Ein falsch getipptes Feld färbt sich rot – dann korrigieren Sie sich bitte. 
+                </p>
+                <br>
+
+                <a href="#version4a" data-role="button" data-inline="true" class="defaultButton" style="float: right;">Aufgabe starten</a> 
+
+            </div>
+
+        </div>
+
+        <div data-role="page" id="version4a" data-dom-cache=true class="testPage">
+
+            <div data-role="content">
+                <!--<div id="timestampV4" >.-.</div>-->
+                <div class="starthint" >
+                    <center> <p>Start</p> </center>
+                </div>
+
+                <!--zahlen-->
+                <div class="kreis" id="v44" style="top: 8%;left: 80%" data-group="tmt4">
+                    <p>4</p> 
+                </div>
+                <div class="kreis" id="v410" style="top: 80%;left: 60%" data-group="tmt4">
+                    <p>10</p> 
+                </div>
+                <div class="kreis" id="v427" style="top: 20%;left: 70%" data-group="tmt4">
+                    <p>27</p>
+                </div>
+                <div class="kreis" id="v449" style="top: 10%;left: 8%" data-group="tmt4">
+                    <p>49</p> 
+                </div>
+                <div class="kreis" id="v462" style="top: 60%;left: 30%" data-group="tmt4">
+                    <p>62</p> 
+                </div>
+                <div class="kreis" id="v483" style="top: 40%;left: 85%" data-group="tmt4">
+                    <p>83</p> 
+                </div>
+                <!--buchstaben-->
+                <div class="kreis" id="v4e" style="top: 7%;left: 50%" data-group="tmt4">
+                    <p>E</p> 
+                </div>
+                <div class="kreis" id="v4h" style="top: 20%;left: 25%" data-group="tmt4">
+                    <p>H</p> 
+                </div>
+                <div class="kreis" id="v4l" style="top: 55%;left: 10%" data-group="tmt4">
+                    <p>L</p> 
+                </div>
+                <div class="kreis" id="v4p" style="top: 82%;left: 25%" data-group="tmt4">
+                    <p>P</p> 
+                </div> 
+                <div class="kreis" id="v4t" style="top: 55%;left: 70%" data-group="tmt4">
+                    <p>T</p> 
+                </div>
+                <div class="kreis" id="v4u" style="top: 82%;left: 79%" data-group="tmt4">
+                    <p>U</p> 
+                </div>
+
+                <div class="endhintright" >
+                    <center> <p>Ziel</p> </center>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!--transition page to the next task (mosaik test)-->
+        <div data-role="page" id="TrailmakingtestTransit1" data-dom-cache=true class="testPage">
+
+
+            <div data-role="content">
+                <h1 id="repeatitionHint" class="transitionPageText" >Diese Aufgabe haben Sie geschafft!</h1> 
+
+                <br>
+                <br>
+                <a data-role="button" data-inline="true" class="defaultButton" onclick="sendResults();"
+                   style="float: right;position: absolute;top: 70%;left: 70%">Abschicken</a> 
+            </div>
+        </div> 
+
+    </body>
+</html>

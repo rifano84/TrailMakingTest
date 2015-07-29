@@ -1,0 +1,788 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29.07.2015, 21:50:36
+    Author     : karim
+*/
+
+
+
+
+@media only screen and (orientation: landscape){
+    /*nur wenn das tablet auf landscape gerichtet ist*/  
+
+    .inputSize{
+        width: 100px;
+        height: 20px;
+    }
+
+    .resultTextStyle{
+        text-shadow: none;
+        text-align: justify;
+       
+    }
+    
+    .introPage{
+        background: #b9c68d;
+    }
+    
+    .whitePage{
+        background-image: url('images/bg/bg-white.png');
+        background-color: transparent;
+        background-size: 100%;
+        width: 100%;
+        height: 100%;
+        height: auto;
+        min-height:100%;
+    }
+
+    .testPage{
+        background: #5092f4;
+    }
+
+    .zahlFragment{
+        width: 70px;
+        height: 100px;
+        border: 2px solid;
+        display: inline-block;
+        background-color: yellow;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 70px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        margin-left: 20px;
+    }
+
+    .secondWord{
+        text-shadow: none;
+        text-align: center;
+        background: #b9c68d;
+        height: 60px;
+        width: 100px;
+        border:solid 2px black;      
+        text-shadow: none;
+        overflow: hidden;
+    }
+
+    .zahlItem{
+
+        font-size: 180px;
+        vertical-align: middle;
+        text-align: center;
+        top:50%;
+        left:50%;
+        text-shadow: none;    
+        color:white;
+    }
+
+    .kreisItem{
+        display: inline-block;
+        margin-left: 25px;
+        list-style: none;
+        text-shadow: none;
+        text-align: center;
+    }
+
+    .instructionText{
+        text-shadow: none;
+        text-align: center;
+        font-family: serif;
+        font-size: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .defaultButton{
+        height: 60px;
+        width: 270px;
+        font-size: x-large;
+        background: orange;
+        text-shadow: none;
+    }
+    
+    h1{
+        text-align: center;
+        color: white;
+    }
+
+    .underline{
+        /*text-decoration: underline;*/
+        color: black;
+        text-shadow: none;
+        font-family: sans-serif;
+        font-size: 30px;
+        
+    }
+
+    .hint{
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+        text-shadow: none;
+    }
+    .bigview {
+        display: inline;
+        font-size: 110px;
+        vertical-align: middle;
+        margin-top: 70px;
+    }
+
+    .wordstable {
+        border:black;
+        border-spacing: 30px;
+        width: 1000px;
+        height: 100px;
+        font-family: serif;
+        font-size: 40px; 
+        background: transparent;
+        font-family: serif;
+        table-layout: fixed;
+    }
+
+    .wordstable tr:hover{
+        cursor: pointer;
+    }
+
+
+    .firstword {
+        font-size: 40px;
+        font-weight: bold;
+        background: #b9c68d;
+        font-family: serif;
+        text-align: center;
+        width: 300px;
+        height: 60px;
+        line-height: 60px;
+        vertical-align: middle;
+        text-shadow: none;
+        border: solid 2px black;
+    }
+
+    .listitem {
+        font-size: 25px;
+        text-decoration: none;
+    }
+
+    .kreis{
+        background-color: #fcaf35;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        text-align: center;
+        border-radius: 50%;
+        display: table;
+        font-size: 30px;
+        font-weight: bold;
+        vertical-align: middle;
+        text-shadow: none;
+
+    }
+
+
+    .smallKreis2{
+        width: 80px;
+        height: 80px;
+        border: 1px solid black;    
+        border-radius: 50%;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        vertical-align: middle;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        line-height: 140px;
+        margin-left: 70px;
+    }
+    .smallKreis{
+
+        /*position: absolute;*/
+        width: 80px;
+        height: 80px;
+        /*    top: 5px;
+            left: 50%;*/
+        border: 1px solid black;
+
+        border-radius: 50%;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        vertical-align: middle;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        line-height: 15px;
+    }
+
+    p {
+        vertical-align: middle;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: bold;
+    }
+    .starthint {
+        background-color: transparent;
+        position: absolute;
+        width: 100px;
+        height: 60px;
+        top: 10%;
+        left: 91%;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 10px;
+        font-size: 40px;
+        text-shadow: none;
+    }
+    .starthintleft{
+        top: 13%;
+        left: 5%;
+        background-color: transparent;
+        width: 100px;
+        height: 60px;
+        line-height: 10px;
+        position: absolute;
+        text-shadow: none;
+        font-size: 40px;
+    }
+
+    .endhintright{
+        background-color: transparent;
+        position: absolute;
+        width: 100px;
+        height: 60px;
+        top: 83%;
+        left: 90%;
+        line-height: 10px;
+        text-shadow: none;
+        font-size: 40px;
+    }
+    #endhint{
+        background-color: transparent;
+        position: absolute;
+        width: 100px;
+        height: 60px;
+        top: 80%;
+        left: 5%;
+        text-align: center;
+        line-height: 10px;
+        text-shadow: none;
+        font-size: 40px;
+    }
+
+    #timestamp{
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    #timestampV2{
+        font-size: 30px;
+        font-weight: bold;
+
+    }
+
+    #timestampV3{
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    #timestampV4{
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .wholeImage{
+        vertical-align: top;
+        position:absolute;
+        left:30px;
+        width:300px;
+        float: left;
+    }
+
+    .divTable{
+        position:fixed;
+        top:0px;
+        right:0px;
+        display:  table;
+        width:auto;
+
+        border-spacing:5px;
+    }
+
+    .divRow{
+        display:table-row;
+        width:auto;
+    }
+
+    .divCell{
+        float:left;/*fix for  buggy browsers*/
+        display:table-column;
+        width:200px;
+    }
+
+    .imageTile{
+        display: table-cell;
+        table-layout: fixed;
+        /*border-spacing: 5px;*/
+        margin-top: 5px;
+        /*margin-right: 5px;*/
+        /*margin-left: 5px;*/
+    }
+
+    .targetTable1{
+        /*border: 3px solid black;*/
+        width: 343px;
+        height: 204px;
+    }
+
+    .targetRow1{
+        /*border: 3px solid black;*/
+        width: 343px;
+        height: 210px;
+    }
+    .targetCell1{
+        border: 3px solid black;
+        width: 171px;
+        height: 210px; 
+    }
+
+
+    .targetTable2{
+        /*border: 3px solid black;*/
+        width: 343px;
+        height: 343px;
+    }
+
+    .targetRow2{
+        /*border: 3px solid black;*/
+        width: 343px;
+        height: 106px;
+    }
+    .targetCell2{
+        border: 3px solid black;
+        width: 171px;
+        height: 106px; 
+    }
+
+    .targetTable3{
+        /*border: 3px solid black;*/
+        width: 519px;
+        height: 140px;
+    }
+
+    .targetRow3{
+        /*border: 3px solid black;*/
+        width: 519px;
+        height: 70px;
+    }
+    .targetCell3{
+        border: 3px solid black;
+        width: 173px;
+        height: 70px; 
+    }
+
+    .targetTable4{
+        /*border: 3px solid black;*/
+        width: 342px;
+        height: 324px;
+    }
+
+    .targetRow4{
+        /*border: 3px solid black;*/
+        width: 342px;
+        height: 108px;
+    }
+    .targetCell4{
+        border: 3px solid black;
+        width: 114px;
+        height: 108px; 
+    }
+
+    .targetTable5{
+        /*border: 3px solid black;*/
+        width: 780px;
+        height: 324px;
+    }
+
+    .targetRow5{
+        /*border: 3px solid black;*/
+        width: 780px;
+        height: 81px;
+    }
+    .targetCell5{
+        border: 3px solid black;
+        width: 156px;
+        height: 81px; 
+    }
+
+    .targetTable6{
+        /*border: 3px solid black;*/
+        width: 468px;
+        height: 428px;
+    }
+
+    .targetRow6{
+        /*border: 3px solid black;*/
+        width: 468px;
+        height: 107px;
+    }
+    .targetCell6{
+        border: 3px solid black;
+        width: 117px;
+        height: 107px; 
+    }
+
+    .targetTable7{
+        /*border: 3px solid black;*/
+        width: 725px;
+        height: 344px;
+    }
+
+    .targetRow7{
+        /*border: 3px solid black;*/
+        width: 725px;
+        height: 86px;
+    }
+    .targetCell7{
+        border: 3px solid black;
+        width: 145px;
+        height: 86px; 
+    }
+
+    .tableWithSplits1{
+        position:absolute;
+        top: 5px;
+        left: 30%;
+    }
+
+    .tableWithSplitsDemo{
+        position:absolute;
+        left: 50%;
+        top: 20%;
+    }
+
+    .cellToFill1{
+        width: 270px;
+        height: 300px;
+        border: 1px solid black;
+
+    }
+
+    .tableToFill1{
+        width: 540px;
+        height: 300px;
+        position: absolute;
+        left: 1px;
+        bottom: 10px;
+    }
+
+    .tableToFillDemo{
+        border: black;
+        width: 343px;
+        height: 204px;
+        position: absolute;
+        top: 45%;      
+    }
+
+    .tableWithSplits2{
+        position:absolute;
+        top: 5px;
+        left: 30%;
+    }
+    .tableToFill2{
+        width: 540px;
+        height: 300px;
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        
+        
+    }
+    .cellToFill2{
+        width: 270px;
+        height: 150px;
+        border: 1px solid black;
+
+    }
+    .tableWithSplits3{
+        position:absolute;
+        top: 5px;
+        left: 30%;
+    }
+    .tableToFill3{
+        width: 540px;
+        height: 300px;
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+    }
+    .cellToFill3{
+       width: 180px;
+       height: 150px;
+        border: 1px solid black;
+
+    }
+    .tableWithSplits4{
+        position:absolute;
+        top: 5px;
+        left: 30%;
+    }
+    .tableToFill4{
+        width: 540px;
+        height: 300px;
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+    }
+    .cellToFill4{
+        width: 180px;
+        height: 100px;
+        border: 1px solid black;
+
+    }
+    .tableWithSplits5{
+         position:absolute;
+        top: 5px;
+        left: 30%;
+    }
+    .tableToFill5{
+        width: 540px;
+        height: 300px;
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+    }
+    .cellToFill5{
+       width: 135px;
+       height: 100px;
+        border: 1px solid black;
+
+    }
+    .tableWithSplits6{
+        position:absolute;
+        top: 5px;
+        left: 30%;
+    }
+    .tableToFill6{
+        width: 540px;
+        height: 300px;
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+    }
+    .cellToFill6{
+       width: 135px;
+       height: 75px;
+        border: 1px solid black;      
+    }
+    .tableWithSplits7{
+        position:absolute;
+        top: 5px;
+        left: 30%;
+    }
+    .tableToFill7{
+        width: 540px;
+        height: 300px;
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+    }
+    .cellToFill7{
+       width: 108px;
+       height: 75px;
+        border: 1px solid black;       
+    }
+
+    .numbersarrayLenght{
+        text-shadow: none;
+        font-size: 40px;
+        position: absolute;
+        top: 70%;
+        left: 70%;
+        border: white solid 1px;
+    }
+
+    .testname{
+        width: 500px;
+        height: 300px;
+        background-color: transparent;
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        font-size: 55px;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: none;
+    }
+
+    .wordpairexample{
+/*        width: 500px;
+        height: 200px;*/
+        background-color: transparent;
+        position: absolute;
+        font-size:30px; 
+        text-shadow: none;
+    }
+
+    .instructionText1{
+        font-size: 25px;
+        color: black;
+        text-shadow: none;
+        text-align: left;
+        font-weight: bold;       
+    }
+    
+     .instructionText2{
+        font-size: 25px;
+        color: black;
+        text-shadow: none;
+        text-align: center;
+        font-weight: bold;       
+    }
+
+    .instructionTextDescription{
+        font-size: 20px;
+        color: black;
+        text-shadow: none;
+        text-align: justify;
+        font-weight: normal;       
+    }
+    
+    .divWithRoundedCorners{
+        margin-left: auto;
+        margin-right: auto;
+        background: lightblue;
+        border-radius: 10px;
+        width: 90%;
+    }
+    
+    .instructionTextDescriptionBold{
+        font-size: 40px;
+        color: black;
+        text-shadow: none;
+        text-align: justify;
+        font-weight: bold;
+        
+    }
+
+    .wordrectangle{
+        width: 160px;
+        height: 50px;
+        background: #b9c68d;
+        border-radius: 1px;
+        border:solid 2px black ;
+        text-shadow: none;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 50px;
+        
+        
+        
+        
+/*        text-shadow: none;
+        text-align: center;
+        background: #b9c68d;
+        height: 60px;
+        width: 100px;
+        border:solid 2px black;      
+        text-shadow: none;
+        overflow: hidden;*/
+    }
+
+    .transitionPageText{
+        font-size: 45px;
+        color: black;
+        text-shadow: none;
+        position: absolute;
+        top: 30%;
+        left: 5%;
+    }
+
+
+    .taskTitle{
+        font-size: 40px;
+        text-shadow: none;
+        color: black;
+    }
+
+    .questionMark{
+        font-size: 60px;
+        font-weight: bolder;
+        display: inline
+    }
+
+    .countdown{
+        text-align: center;
+        width: 600px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: transparent;
+
+    }
+
+    .countdownText{
+        font-size: 50px;
+        text-shadow: none;
+    }
+
+    .alertText{
+        font-size: 30px;
+        text-shadow: none;   
+        color: red;
+        border: red solid 1px;
+        display: none;
+    }
+
+    div.centre
+    {
+        text-align: left;
+        width: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: transparent;
+    }
+
+
+    div.originalImage1 {
+        position: absolute;
+        bottom: 10px;
+        right: 1px;
+        
+    }
+    
+    
+
+
+
+    .imageTileStyle{
+     
+    }
+    
+    .imagetileAppearance{
+        display: block;
+    }
+
+
+
+
+}
+
+
+
+root { 
+    display: block;
+}
+
+
+
+
+
