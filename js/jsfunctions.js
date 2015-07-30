@@ -4777,11 +4777,11 @@ function sendResults() {
 
                     console.log(data);
 
-//                    if (data.success === true) {
-//                        $.mobile.changePage('#sendConfirmation', {transition: "flip"});
-//                    }
+                    if (data.success === true) {
+                        $.mobile.changePage('#sendConfirmation', {transition: "flip"});
+                    }
 
-                    if (data.success === false) {
+                    else if (data.success === false) {
                         $.mobile.changePage('#sendFailed', {transition: "flip"});
                     }
 
