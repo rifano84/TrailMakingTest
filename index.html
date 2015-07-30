@@ -119,7 +119,38 @@ This page should contain:
                 <br><br>
                 <center> <a href="javascript:pwschutz()" data-role="button" data-inline="true" class="defaultButton" >Nochmal</a> </center>
             </div>
-        </div> 
+        </div>
+        
+        
+         <!--to confirm send-->
+        <div data-role="page" id="sendConfirmation" data-dom-cache=true class="introPage">
+
+            <div data-role="content" >
+                <center> <h1 id="sendHint">Ihre Ergebnisse wurden uns übertragen!<br> Wir bedanken uns herzlich für Ihre Mitarbeit!</h1> </center> 
+
+                <center> <a href="javascript:pwschutz()" data-role="button" data-inline="true" class="defaultButton" >Zum Anfang</a> </center>
+
+                <!--add code when button calls directly an external url-->
+                <!--href="http://www.neurocare-aal.de/screening" rel="external"-->
+                
+            </div>
+        </div>
+        
+        
+        <!--when send data was failed-->
+        <div data-role="page" id="sendFailed" data-dom-cache=true class="introPage">
+
+            <div data-role="content" >
+                <center> <h1>Ihre Ergebnisse konnten nicht übertragen werden!<br> Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut!</h1> </center> 
+
+                <center> <a  data-role="button" data-inline="true" class="defaultButton"  onclick="sendResults();" >Nochmal</a> </center>
+
+                
+            </div>
+        </div>
+
+        
+        
         
         
     </body>
