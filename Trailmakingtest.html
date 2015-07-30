@@ -521,6 +521,32 @@ and open the template in the editor.
                    style="float: right;position: absolute;top: 70%;left: 70%">Abschicken</a> 
             </div>
         </div> 
+        
+        
+        <!--to confirm send-->
+        <div data-role="page" id="sendConfirmation" data-dom-cache=true class="introPage">
+
+            <div data-role="content" >
+                <center> <h1 id="sendHint">Ihre Ergebnisse wurden uns übertragen!<br> Wir bedanken uns herzlich für Ihre Mitarbeit!</h1> </center> 
+
+                
+                              
+            </div>
+        </div>
+        
+        
+        <!--when send data was failed-->
+        <div data-role="page" id="sendFailed" data-dom-cache=true class="introPage">
+
+            <div data-role="content" >
+                <center> <h1>Ihre Ergebnisse konnten nicht übertragen werden!<br> Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut!</h1> </center> 
+
+                <center> <a  data-role="button" data-inline="true" class="defaultButton"  onclick="sendResults();" >Nochmal</a> </center>
+
+                
+            </div>
+        </div>
+        
 
     </body>
 </html>
